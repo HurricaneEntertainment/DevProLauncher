@@ -46,6 +46,8 @@ namespace YGOPro_Launcher
         public string GameofPlayers;
         public string GameFilterActive;
         public string GameColumnRoomName, GameColumnType, GameColumnRules, GameColumnMode, GameColumnState, GameColumnPlayers;
+        public string GameBtnDeck, GameBtnReplay, GameBtnOption, GameBtnProfile, GameBtnHost, GameBtnQuick;
+        public string GameLabWLD, GameLabDeck, GameLabUser;
 
         // Option_frm.cs
         public string optionGb1, optionGb2, optionGb3, optionMsbForget;
@@ -61,6 +63,12 @@ namespace YGOPro_Launcher
         // FileManager_frm.cs
         public string fileBtnRename, fileBtnDelete, fileBtnFolder, fileBtnGame, fileMsgNoExist, fileMsgNoSelect;
         public string fileMsbMulti, fileAskDelete, fileNewName, fileInputConfirm;
+
+        // About_frm.cs
+        public string aboutLabel1, aAboutText, aboutLabel5;
+
+        // Customize_frm.cs
+        public string cusRemoveBtn, cusAddThemeBtn, cusAddContentBtn, cusPreview, cusBackup, cusLabelTheme, cusLabelCont;
 
         public void Load(string languageFileName)
         {
@@ -79,6 +87,30 @@ namespace YGOPro_Launcher
                 string value = data[1].Trim();
                 switch (variable)
                 {
+                    // About_frm.cs
+                    case "aabouttext": aAboutText = value;
+                        break;
+                    case "aboutlabel1": aboutLabel1 = value;
+                        break;
+                    case "aboutlabel5": aboutLabel5 = value;
+                        break;
+
+                    // Customize_frm.cs
+                    case "cusremovebtn": cusRemoveBtn = value; 
+                        break;
+                    case "cusaddthemebtn": cusAddThemeBtn = value; 
+                        break;
+                    case "cusaddcontentbtn": cusAddContentBtn = value; 
+                        break;
+                    case "cuspreview": cusPreview = value; 
+                        break;
+                    case "cusbackup": cusBackup = value; 
+                        break;
+                    case "cuslabeltheme": cusLabelTheme= value; 
+                        break;
+                    case "cuslabelcont": cusLabelCont = value; 
+                        break;
+
                     // Quick Host
                     case "quickhostsetting": QuickHostSetting = value;
                         break;
@@ -165,6 +197,24 @@ namespace YGOPro_Launcher
                     case "gamecolumnstate": GameColumnState = value;
                         break;
                     case "gamecolumnplayers": GameColumnPlayers = value;
+                        break;
+                    case "gamebtndeck": GameBtnDeck = value; 
+                        break;
+                    case "gamebtnreplay": GameBtnReplay = value; 
+                        break;
+                    case "gamebtnoption": GameBtnOption = value; 
+                        break;
+                    case "gamebtnprofile": GameBtnProfile = value; 
+                        break;
+                    case "gamebtnhost": GameBtnHost = value; 
+                        break;
+                    case "gamebtnquick": GameBtnQuick = value; 
+                        break;
+                    case "gamelabwld": GameLabWLD = value; 
+                        break;
+                    case "gamelabdeck": GameLabDeck = value; 
+                        break;
+                    case "gamelabuser": GameLabUser = value; 
                         break;
 
                     // Options_frm.cs

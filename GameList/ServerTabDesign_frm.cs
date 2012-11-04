@@ -63,6 +63,16 @@ namespace YGOPro_Launcher
             ColumnState.Text = lang.GameColumnState;
             ColumnPlayers.Text = lang.GameColumnPlayers;
 
+            DeckBtn.Text = lang.GameBtnDeck;
+            ReplaysBtn.Text = lang.GameBtnReplay;
+            ProfileBtn.Text = lang.GameBtnProfile;
+            OptionsBtn.Text = lang.GameBtnOption;
+            QuickBtn.Text = lang.GameBtnQuick;
+            HostBtn.Text = lang.GameBtnHost; 
+            label14.Text = lang.GameLabWLD; 
+            label13.Text = lang.GameLabDeck; 
+            label11.Text = lang.GameLabUser; 
+
         }
 
         public void RequestUserWLD()

@@ -18,6 +18,7 @@ namespace YGOPro_Launcher
         public ContentType contentView = ContentType.Covers;
         Dictionary<string, Theme> Themes = new Dictionary<string, Theme>();
         public string SelectedTheme = "None";
+        private Language lang = new Language();
 
         public Customize_frm()
         {
@@ -57,6 +58,20 @@ namespace YGOPro_Launcher
             ThemeSelect.SelectedIndexChanged += new EventHandler(SelectedTheme_Changed);
 
             contentView = ContentType.Covers;
+
+            lang.Load(Program.Config.language + ".conf");
+            newText();
+        }
+
+        private void newText()
+        {
+            RemoveThemeBtn.Text = lang.cusRemoveBtn;
+            AddThemeBtn.Text = lang.cusAddThemeBtn;
+            AddContentBtn.Text = lang.cusAddContentBtn;
+            PreviewBtn.Text = lang.cusPreview;
+            BackUpBtn.Text = lang.cusBackup;
+            label2.Text = lang.cusLabelTheme;
+            label1.Text = lang.cusLabelCont;
         }
 
         public void SaveTheme(string themename)
